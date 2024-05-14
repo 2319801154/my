@@ -46,3 +46,9 @@
   font-weight: bold;
   margin-top: 15px;
 }
+.npmUrl{
+  display: block;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 5px;
+}

@@ -6,7 +6,6 @@ let userInfodata = [
   '工作年限：5年',
 ]
 let cont = document.querySelector('.cont');
-
 let Info = document.querySelector('.Info');
 Info.innerHTML = `<div class="title">个人信息</div>`
 Info.innerHTML += `<div class="userInfo"></div>`
@@ -15,13 +14,14 @@ for (let i = 0; i < userInfodata.length; i++) {
   userInfo.innerHTML += `<div>${userInfodata[i]}</div>`
 }
 let technologyData = [
-  '熟练使用Html/Html5/Css/Css3，Js ，div+css布局及flex布局方式',
+  '熟练使用Html/Html5/Css/Css3，Js ，div+css及flex布局方式',
   '熟练使用Vue 及周边资源如Vue-router,Vuex,axio等及组件化开发',
-  '熟练使用element ui 和ant design vant iview uview nutui 等ui框架',
+  '熟练使用element ui 和ant design vant iview uview nutui layui 等ui框架',
   '熟练使用vue3,taro,uniapp，微信小程序进行开发',
   '熟悉使用蓝湖，axure ,ps等设计工具',
   '能使用 echars antv 百度地图进行开发',
   '熟练使用git sass 熟悉前后端分离开发',
+  '在NPM上有自己的插件包,不定期在CSDN上发布技术博客',
 ]
 let technology = document.querySelector('.technology');
 technology.innerHTML = `<div class="title">专业技能</div>`
@@ -32,8 +32,8 @@ for (let i = 0; i < technologyData.length; i++) {
 }
 // 公司
 let workData = [
-  '2019.3 - 2021.3浙江辉驿网络科技有限公司',
-  '2021.3 - 2021.12 上海伴修网络科技有限公司',
+  '2019.03 - 2021.03浙江辉驿网络科技有限公司',
+  '2021.03 - 2021.12 上海伴修网络科技有限公司',
   '2021.12 - 至今 上海网驿信息科技有限公司',
 ]
 let work = document.querySelector('.work');
@@ -47,8 +47,8 @@ for (let i = 0; i < workData.length; i++) {
 let projectData = [
   {
     name: '如家酒店后台管理系统',
-    methods:'实现方式：vue element ui Vue-router,Vuex,axios，帆软报表工具等',
-    describe:'项目描述：该项目是如家酒店的酒店管理系统，上百人的团队，耗时一年左右，项目功能齐全，vue 加element 	ui 开发框架，采用sass编写样式，前后端分离模式，组件化开发，并且使用了帆软报表工具做报表。覆盖	了酒店行业大部分业务场景。',
+    methods:'实现方式：vue2 element ui echars 帆软报表工具等',
+    describe:'项目描述：该项目是如家酒店的酒店管理系统，上百人的团队，耗时一年左右，项目功能齐全，vue 加element ui开发框架，采用sass编写样式，前后端分离模式，组件化开发，并且使用了帆软报表工具做报表。覆盖了酒店行业大部分业务场景。',
     job:[
       '静态页面，sass编写样式，交互逻辑编写 flex自适应布局，公用组件的开发',
       '前后端接口数据联调，数据渲染',
@@ -58,8 +58,8 @@ let projectData = [
   },
   {
     name: '开元酒店人才盘点系统',
-    methods:'实现方式：vue ant design，Vue-router，Vuex，axios，echars',
-    describe:'项目描述：此项目为开元酒店自己内部使用的人才盘点系统，人才信息的新增，修改，删除，查看，导出人才	信息表，echars展示人才信息流动情况。',
+    methods:'实现方式：vue2 antd echars',
+    describe:'项目描述：此项目为开元酒店自己内部使用的人才盘点系统，人才信息的新增，修改，删除，查看，导出人才信息表，echars展示人才信息流动情况。',
     job:[
       '独立搭建项目，包括封装axios,路由配置，封装接口，开发公用组件',
       'Vue加ant design 开发 flex 自适应布局方式',
@@ -69,8 +69,8 @@ let projectData = [
   },
   {
     name: '智慧酒店',
-    methods:'实现方式：vue',
-    describe:'项目描述：这是一款酒店的H5项目，用户入住酒店可通过扫码及链接进入该项目，来进行点餐，送物，维修	设备，续住，退房，开票等功能',
+    methods:'实现方式：vue2',
+    describe:'项目描述：这是一款酒店的H5项目，用户入住酒店可通过扫码及链接进入该项目，来进行点餐，送物，维修设备，续住，退房，开票等功能',
     job:[
       '自适应各种手机尺寸',
       '前后端数据联调，展示，逻辑交互编写',
@@ -78,30 +78,20 @@ let projectData = [
     ]
   },
   {
-    name: '酒店管家app',
-    methods:'实现方式：vue',
-    describe:'项目描述：这是一款酒店的app项目,与原生端安卓ios共同协作开发，用于酒店的管理人员，查看本酒店或本区域内酒	店的经营数据和情况',
+    name: '酒店管家app,酒店管家pc',
+    methods:'实现方式：vue2 element echars 百度地图',
+    describe:'项目描述：酒店的项目,app开发是与原生端安卓ios共同协作开发。用于酒店的管理人员，查看本酒店或本区域内酒店的经营数据和情况以及公告，问卷，合作酒店的优惠政策，物业信息，立项资料等',
     job:[
       '与原生端联调，上传功能，扫码功能，拍照功能，路由跳转等',
-      'App日常测试打包发版',
+      '日常测试打包发版及版本更新迭代',
       '参与业务部门的开发需求，与产品确认开发方向，功能实现以及项目功能进度',
-    ]
-  },
-  {
-    name: '酒店管家pc',
-    methods:'实现方式：vue element',
-    describe:'项目描述：这是一款酒店的pc项目，用于酒店的管理人员，查看本酒店或本区域内酒店的经营数据和情况，	管理人员发布公告，问卷，合作酒店的优惠政策，物业信息，立项资料等',
-    job:[
-      '日常开发新功能，维护代码，版本更新迭代',
-      '日常测试打包构建发版，整合代码',
-      '与后端，测试，产品沟通保证项目进度',
-      '参与业务部门的开发需求，与产品确认开发方向，功能实现以及项目功能进度'
+      '与后端，测试，产品沟通保证项目进度'
     ]
   },
   {
     name: '平安汽融财务系统',
-    methods:'实现方式：vue antd antv',
-    describe:'项目描述：平安租赁财务部门使用的一款系统，项目包括一些基本的系统管理，字典管理等，核心功能凭证确	认，单据生成，以及可配置，灵活性较高的凭证生成功能',
+    methods:'实现方式：vue2 antd antv',
+    describe:'项目描述：平安租赁财务部门使用的一款系统，项目包括一些基本的系统管理，字典管理等，核心功能凭证确认，单据生成，以及可配置，灵活性较高的凭证生成功能',
     job:[
       '前端项目技术框架选型',
       '项目搭建，打包发布，组件封装',
@@ -111,7 +101,7 @@ let projectData = [
   },
   {
     name: '租赁系统',
-    methods:'实现方式：vue element',
+    methods:'实现方式：vue2 element antv',
     describe:'项目描述：公司自研项目，定位于公司的财务部门使用，帮助财务部门解决大批量手工计算的问题，主要包括	合同，资产，变更，报表及一些常见的系统管理的功能',
     job:[
       '前端项目技术框架选型',
@@ -121,39 +111,30 @@ let projectData = [
     ]
   },
   {
-    name: '欧贝（移动商城）',
-    methods:'实现方式：vue uniapp ts',
-    describe:'项目描述：欧贝商城，h5,安卓，ios 三端同步开发的一款商城平台，主要用于企业采购，包含报价，审批，	寻源，供应商管理，电子合同等',
+    name: '欧贝app,欧贝pc',
+    methods:'实现方式：vue2 uniapp ts jquery layui',
+    describe:'项目描述：欧贝商城，h5,安卓，ios同步开发的一款商城平台，主要用于企业采购，包含报价，审批，寻源，供应商管理，电子合同等',
     job:[
       '日常开发新功能如订单，收银台等，维护代码，版本更新迭代',
       '测试修复问题，完善交互体验',
       '兼容性处理，原生端交互',
       '参与业务部门的开发需求，与产品确认开发方向，功能实现以及项目功能进度'
-    ]
+    ],
   },
   {
-    name: '易销小程序 ',
-    methods:'实现方式：taro vantui taro-ui-vue',
-    describe:'项目描述：为供应商打造的一款小程序，集合商品完整的下单 支付 取消订单 确认收货 查看物流等一套的流	程。并且为供应商提供了支持福利商品的业务场景',
+    name: '易销小程序',
+    methods:'实现方式：vue2 taro vantui taro-ui-vue',
+    describe:'项目描述：为供应商打造的一款小程序，集合商品完整的下单支付取消订单确认收货查看物流等一套的流程。并且为供应商提供了支持福利商品的业务场景',
     job:[
       '业务需求评审及开发',
       '功能及样式兼容性处理',
       '公司内部收银台支付功能联调',
       '针对福利商品的不同业务场景开发'
-    ]
+    ],
+    img:[]
   },
   {
-    name: '鞍钢集团惠民核销小程序 ',
-    methods:'实现方式：vue3 taro',
-    describe:'项目描述：鞍钢集团内部使用的小程序，用于领取福利商品核销，包含扫码核销，待核销，全部订单，我的核销记录等。',
-    job:[
-      '业务需求评审，功能开发',
-      '测试修复问题，完善交互体验',
-      '项目版本更新迭代发布',
-    ]
-  },
-  {
-    name: '德远云商 ',
+    name: '德远云商',
     methods:'实现方式：vue2 iview ',
     describe:'项目描述：商城项目，包含首页，商品大厅，商品列表，商品详情，购物车，下单等功能',
     job:[
@@ -162,6 +143,17 @@ let projectData = [
       '项目版本更新迭代发布',
     ]
   },
+  {
+    name: '鞍钢集团惠民核销小程序 ',
+    methods:'实现方式：vue3 taro nutui',
+    describe:'项目描述：鞍钢集团内部使用的小程序，用于领取福利商品核销，包含扫码核销，待核销，全部订单，我的核销记录等。',
+    job:[
+      '业务需求评审，功能开发',
+      '测试修复问题，完善交互体验',
+      '项目版本更新迭代发布',
+    ]
+  },
+
 ]
 let project = document.querySelector('.project');
 project.innerHTML = `<div class="title">项目经历</div>`
@@ -175,6 +167,35 @@ for (let i = 0; i < projectData.length; i++) {
   for (let j = 0; j < projectData[i].job.length; j++) {
     projectInfo.innerHTML += `<div class='pl-30'>${j+1}.${projectData[i].job[j]}</div>`
   }
+}
+let otherList = [
+  {
+    title:'cir-progress-bar',
+    url:'https://www.npmjs.com/package/cir-progress-bar',
+    describe:'NPM环形进度条插件',
+  },
+  {
+    title:'vue-price-format',
+    url:'https://www.npmjs.com/package/vue-price-format',
+    describe:'NPM金额格式化插件',
+  },
+  {
+    title:'vue-watermark-component ',
+    url:'https://www.npmjs.com/package/vue-watermark-component',
+    describe:'NPM水印插件',
+  },
+  {
+    title:'CSDN',
+    url:'https://blog.csdn.net/qq_43039004',
+    describe:'',
+  },
+]
+let other = document.querySelector('.other');
+other.innerHTML = `<div class="title">其他</div>`
+other.innerHTML += `<div class="otherInfo"></div>`
+let otherInfo = document.querySelector('.otherInfo');
+for (let i = 0; i < otherList.length; i++) {
+  otherInfo.innerHTML += `<a class='npmUrl' href=${otherList[i].url} class='pl-30'>${otherList[i].title} ${otherList[i].describe}</a>`
 }
 
 
