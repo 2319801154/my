@@ -3,11 +3,12 @@
   margin: 0;
 }
 .cont{
-  width: 1000px;
+  width: 90vw;
+  max-width: 1000px;
   margin: 20px auto;
 }
 .title{
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   height: 80px;
   line-height: 80px;
@@ -51,4 +52,55 @@
   font-size: 18px;
   margin-left: 20px;
   margin-top: 5px;
+}
+
+
+@media (min-width: 321px) and (max-width: 750px){
+  .cont{
+    width: 90vw;
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+  .title{
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .userInfo div{
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .technologyInfo div{
+    padding: 5px;
+    font-size: 14px;
+  }
+  .workInfo div{
+    padding: 5px;
+    font-size: 14px;
+  }
+  .projectInfo .projectname{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .projectInfo .pl-20{
+    padding-left: 20px;
+  }
+  .projectInfo .pl-30{
+    padding-left: 15px;
+  }
+  .projectInfo div{
+    padding: 5px;
+    font-size: 14px;
+  }
+  .projectInfo{
+    line-height: 1.5;
+  }
+  .npmUrl{
+    display: block;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
 }
